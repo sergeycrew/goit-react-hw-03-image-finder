@@ -22,7 +22,7 @@ export class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { query, currentPage, scroll } = this.state;
+    const { query } = this.state;
 
     if (prevState.query !== query) {
       this.fetchPictures();
@@ -31,7 +31,7 @@ export class App extends Component {
   }
 
   fetchPictures = () => {
-    const { query, currentPage, noDataFound } = this.state;
+    const { query, currentPage } = this.state;
     this.setState({ isLoading: true, noDataFound: false });
     console.dir(Window);
     const scrollHeight = document.documentElement.scrollHeight;
