@@ -3,7 +3,6 @@ import { FallingLines } from 'react-loader-spinner';
 export const Loader = () => {
   return (
     <FallingLines
-      //className="spinner"
       color="blue"
       width="100"
       visible={true}
