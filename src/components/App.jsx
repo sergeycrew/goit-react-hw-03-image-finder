@@ -31,7 +31,7 @@ export class App extends Component {
   }
 
   fetchPictures = () => {
-    const { query, currentPage } = this.state;
+    const { query, currentPage, noDataFound } = this.state;
     this.setState({ isLoading: true, noDataFound: false });
     console.dir(Window);
     const scrollHeight = document.documentElement.scrollHeight;
