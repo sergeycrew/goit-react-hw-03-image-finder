@@ -31,7 +31,7 @@ export class App extends Component {
   }
 
   fetchPictures = () => {
-    const { query, currentPage, noDataFound } = this.state;
+    const { query, currentPage } = this.state;
     this.setState({ isLoading: true, noDataFound: false });
     console.dir(Window);
     const scrollHeight = document.documentElement.scrollHeight;
@@ -93,7 +93,7 @@ export class App extends Component {
       <>
         <SearchBar onSubmit={this.handleSubmit} />
         {isLoading && (
-          <div className="loader">
+          <div className="spinner">
             <Loader />
           </div>
         )}
